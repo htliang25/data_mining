@@ -17,7 +17,7 @@ import calculate as cal
 # AF00373
 
 name = input("你要生成地图的文件名：")
-file_path = sys.path[0] + "\\raw_data\\" + name + ".csv"
+file_path = sys.path[0] + "/raw_data/" + name + ".csv"
 data = pd.read_csv(file_path)
 
 array = data.values
@@ -37,7 +37,7 @@ route = folium.PolyLine(    #polyline方法为将坐标用线段形式连接起�
 ).add_to(m)    #将这条线添加到刚才的区域m内
 
 m.add_child(folium.LatLngPopup())
-save_path = sys.path[0] + "\\original_map"
+save_path = sys.path[0] + "/original_map"
 save_name = name + "_1.html"
 m.save(os.path.join(save_path, save_name))
 
