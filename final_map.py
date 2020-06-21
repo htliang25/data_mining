@@ -3,8 +3,8 @@ from sklearn.neighbors import LocalOutlierFactor
 import time
 import os
 import sys
-import mod.write as write
-import mod.calculate as cal
+import write as write
+import calculate as cal
 
 name = input("你要生成地图的文件名：")
 

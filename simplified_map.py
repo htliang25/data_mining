@@ -4,9 +4,9 @@ import os
 import time
 from sklearn.neighbors import LocalOutlierFactor
 import sys
-import mod.change as change
-import mod.write as write
-import mod.calculate as cal
+import change as change
+import write as write
+import calculate as cal
 
 name = input("你要生成地图的文件名：")
 file_path = sys.path[0] + "\\raw_data\\" + name + ".csv"

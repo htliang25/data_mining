@@ -2,7 +2,7 @@ import folium
 import pandas as pd
 import os
 import sys
-import mod.calculate as cal
+import calculate as cal
 
 # 测试地图包括一下10个
 # AA00002
