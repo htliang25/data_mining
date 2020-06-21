@@ -9,7 +9,7 @@ import write as write
 import calculate as cal
 
 name = input("你要生成地图的文件名：")
-file_path = sys.path[0] + "\\raw_data\\" + name + ".csv"
+file_path = sys.path[0] + "/raw_data/" + name + ".csv"
 data = pd.read_csv(file_path)
 
 array = data.values
@@ -58,7 +58,7 @@ for i in range(len(k)):
 
 location = []
 
-length = input("请输入异常点之间的分割长度")
+length = input("请输入异常点之间的分割长度：")
 
 # AA00002中length = 300
 # AB00006中length = 400
@@ -89,8 +89,8 @@ for i in range(len(position) - 1):
     else:
         l.append([position[i][0], position[i][1]])
 
-save_outliers = sys.path[0] + "\\outliers\\" + name + ".csv"
-save_simplified_map_path = sys.path[0] + "\\simplified_map"
+save_outliers = sys.path[0] + "/outliers/" + name + ".csv"
+save_simplified_map_path = sys.path[0] + "/simplified_map"
 save_simplified_map_name = name + "_2.html"
 
 write.create_map(save_outliers, location)
