@@ -8,11 +8,11 @@ import calculate as cal
 
 name = input("你要生成地图的文件名：")
 
-dodification_path = sys.path[0] + "\\dodification\\" + name + ".csv" # path5
-file_path = sys.path[0] + "\\raw_data\\" + name + ".csv" # path2
-final_data = sys.path[0] + "\\answer\\n_" + name + ".csv" # path1
-stop_point = sys.path[0] + "\\dodification\\" + name + ".xlsx" # path3
-save_final_map_path = sys.path[0] + "\\final_map"
+dodification_path = sys.path[0] + "/dodification/" + name + ".csv" # path5
+file_path = sys.path[0] + "/raw_data/" + name + ".csv" # path2
+final_data = sys.path[0] + "/answer/n_" + name + ".csv" # path1
+stop_point = sys.path[0] + "/dodification/" + name + ".xlsx" # path3
+save_final_map_path = sys.path[0] + "//final_map"
 save_final_map_name = name + "_3.html"
 
 data = pd.read_csv(file_path)
@@ -86,5 +86,5 @@ for i in range(len(position) - 1):
 
 write.map(final_data, cal.avg(lat), cal.avg(lng), os.path.join(save_final_map_path, save_final_map_name))
 
-#输出每段路程的里程和平均速度
+#输出每段路程的里程、平均速度和急加减速次数
 cal.cal(final_data)
